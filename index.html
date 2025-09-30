@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --cor-principal: #4a90e2;
+      --cor-secundaria: #2c3e50;
+    }
+    body {
+      background-color: #f5f5f5;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+      height: 100%;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .badge-disciplina {
+      font-size: 0.85rem;
+      padding: 5px 12px;
+    }
+    footer {
+      background-color: var(--cor-secundaria);
+      color: white;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Mateus dos Santos Vieira</h1>
+      <p class="lead">Portfólio de Atividades - Segundo Semestre 2025</p>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Minhas Atividades</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal1">
+          <div class="card-body">
+            <span class="badge bg-primary badge-disciplina">Testes</span>
+            <h5 class="card-title mt-2">Aula 1 - Elaborando Testes</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal2">
+          <div class="card-body">
+            <span class="badge bg-success badge-disciplina">TCC</span>
+            <h5 class="card-title mt-2">Entrega do Cronograma</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal3">
+          <div class="card-body">
+            <span class="badge bg-primary badge-disciplina">Testes</span>
+            <h5 class="card-title mt-2">Aula 3 - Técnicas de Testes</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal4">
+          <div class="card-body">
+            <span class="badge bg-primary badge-disciplina">Testes</span>
+            <h5 class="card-title mt-2">Aula 4 - Atividade</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal5">
+          <div class="card-body">
+            <span class="badge bg-primary badge-disciplina">Testes</span>
+            <h5 class="card-title mt-2">Aula 5 - Atividade</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal6">
+          <div class="card-body">
+            <span class="badge bg-primary badge-disciplina">Testes</span>
+            <h5 class="card-title mt-2">Aula 6 - Atividades</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal7">
+          <div class="card-body">
+            <span class="badge bg-secondary badge-disciplina">Bootstrap</span>
+            <h5 class="card-title mt-2">Aula 1 - Atividade</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal8">
+          <div class="card-body">
+            <span class="badge bg-secondary badge-disciplina">Bootstrap</span>
+            <h5 class="card-title mt-2">Aula 2 - Atividade</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal9">
+          <div class="card-body">
+            <span class="badge bg-secondary badge-disciplina">Bootstrap</span>
+            <h5 class="card-title mt-2">Aula 3 - Atividade</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal10">
+          <div class="card-body">
+            <span class="badge bg-secondary badge-disciplina">Bootstrap</span>
+            <h5 class="card-title mt-2">Aula 4 - Atividade</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal11">
+          <div class="card-body">
+            <span class="badge bg-danger badge-disciplina">IoT</span>
+            <h5 class="card-title mt-2">Roteiro Final</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal12">
+          <div class="card-body">
+            <span class="badge bg-danger badge-disciplina">IoT</span>
+            <h5 class="card-title mt-2">Podcast</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal13">
+          <div class="card-body">
+            <span class="badge bg-danger badge-disciplina">IoT</span>
+            <h5 class="card-title mt-2">Arduino 5: A Protoboard</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal14">
+          <div class="card-body">
+            <span class="badge bg-danger badge-disciplina">IoT</span>
+            <h5 class="card-title mt-2">Arduino 7: Eletrônica</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#modal15">
+          <div class="card-body">
+            <span class="badge bg-danger badge-disciplina">IoT</span>
+            <h5 class="card-title mt-2">Arduino 8: Piscando LED</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Testes - Aula 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Testes de Software</p>
+          <p><strong>Atividade:</strong> Elaborando Testes</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://docs.google.com/document/d/1Tv5-HC1eHnOwFQLOqq3IyLNtjEGS7QzaN7UOTPpZ4c0/edit?usp=sharing" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">TCC - Cronograma</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> TCC</p>
+          <p><strong>Atividade:</strong> Entrega do Cronograma</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAGvOhSfYqs/BFFIxBU8hbRYF7be2XNyYw/edit?utm_content=DAGvOhSfYqs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton&authuser=0" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">TCC - Cronograma</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Testes de Software</p>
+          <p><strong>Atividade:</strong> Aula 3 - Técnicas de Testes</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://docs.google.com/document/d/1UTtHyXbeqxrc2tRvMf0cljYRPs8-SHAjhQg9g6kNb00/edit?usp=sharing" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal4" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Testes - Aula 4</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Testes de Software/p>
+          <p><strong>Atividade:</strong> Atividade Prática</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAGwhOt4ySY/B_uVIHu61zKbhD-vvKKwEg/edit?utm_content=DAGwhOt4ySY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal5" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Testes - Aula 5</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Testes de Software</p>
+          <p><strong>Atividade:</strong> Atividade Prática</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://docs.google.com/document/d/1f4Hq8hWRF6aQnfHA1OaRWc1uWChXjxJjIlFrvIH8qZE/edit?usp=sharing" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal6" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Testes - Aula 6</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Testes de Software</p>
+          <p><strong>Atividade:</strong> Atividades Complementares</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAGx1d_Dzds/2RDPFM-h8kfj8ApxfcE39g/edit?utm_content=DAGx1d_Dzds&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal7" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bootstrap - Aula 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Bootstrap</p>
+          <p><strong>Atividade:</strong> Introdução ao Bootstrap</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAG0dhzSsWI/IXQpmxt1KvCH0_5bt2uXvw/edit?utm_content=DAG0dhzSsWI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal8" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bootstrap - Aula 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Bootstrap</p>
+          <p><strong>Atividade:</strong> Grid e Componentes</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://mat-vieira12.github.io/fitAcademia/  " target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal9" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bootstrap - Aula 3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Bootstrap</p>
+          <p><strong>Atividade:</strong> Componentes Avançados</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://mat-vieira12.github.io/aula3Bootstrap/?authuser=0" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal10" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bootstrap - Aula 4</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Bootstrap</p>
+          <p><strong>Atividade:</strong> Portfólio</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://mat-vieira12.github.io/Portifolio/" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal11" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">IoT - Roteiro Final</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> IoT</p>
+          <p><strong>Atividade:</strong> Roteiro Final</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAG0c8l1nHI/LSflBfLOjFmAH8g6vLIhIg/edit?utm_content=DAG0c8l1nHI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal12" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">IoT - Podcast</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> Iot</p>
+          <p><strong>Atividade:</strong> Entrega do Podcast</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://drive.google.com/file/d/1AJp3qFCqdeAp492Mzhze8uhcvd8GPM66/view?usp=sharing/" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal13" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Arduino 5: A Protoboard</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> IoT</p>
+          <p><strong>Atividade:</strong> Conhecendo a Protoboard</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAG0dkr31Ls/f7xN4x0zDnai7_KXNruSyQ/edit?utm_content=DAG0dkr31Ls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal14" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Arduino 7: Eletrônica</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> IoT</p>
+          <p><strong>Atividade:</strong> Introdução à Eletrônica</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.canva.com/design/DAG0dr91rI8/0np1Nn2ivWFQlQ50H-pbQQ/edit?utm_content=DAG0dr91rI8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal15" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Arduino 8: Piscando LED</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Disciplina:</strong> IoT</p>
+          <p><strong>Atividade:</strong> Piscando um LED</p>
+        </div>
+        <div class="modal-footer">
+          <a href=https://www.canva.com/design/DAG0dutJ3E0/yvffvvB8qjTFGP6VkVFFng/edit?utm_content=DAG0dutJ3E0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 - Meu Portfólio Acadêmico</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
