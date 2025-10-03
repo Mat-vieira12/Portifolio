@@ -35,6 +35,33 @@
       font-size: 0.85rem;
       padding: 5px 12px;
     }
+    .comentarios-section {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 50px 0;
+    }
+    .comentario-item {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border-left: 4px solid var(--cor-principal);
+    }
+    .comentario-nome {
+      font-weight: bold;
+      color: var(--cor-principal);
+      margin-bottom: 5px;
+    }
+    .comentario-email {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-bottom: 10px;
+    }
+    .comentario-texto {
+      color: #2c3e50;
+    }
     footer {
       background-color: var(--cor-secundaria);
       color: white;
@@ -177,6 +204,41 @@
     </div>
   </div>
 
+  <!-- Seção de Comentários -->
+  <div class="container">
+    <div class="comentarios-section">
+      <h2 class="text-center mb-4">Deixe seu Comentário</h2>
+      
+      <form id="formComentario">
+        <div class="mb-3">
+          <label for="nomeInput" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nomeInput" required>
+        </div>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
+          <div id="emailHelp" class="form-text">Não compartilharemos seu email com ninguém.</div>
+        </div>
+        <div class="mb-3">
+          <label for="comentarioInput" class="form-label">Comentário</label>
+          <textarea class="form-control" id="comentarioInput" rows="4" required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="aceitoCheck" required>
+          <label class="form-check-label" for="aceitoCheck">Aceito os termos de uso</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Comentário</button>
+      </form>
+
+      <hr class="my-5">
+
+      <h3 class="mb-4">Comentários Recebidos</h3>
+      <div id="listaComentarios">
+        <p class="text-muted">Ainda não há comentários. Seja o primeiro!</p>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="modal1" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -217,7 +279,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">TCC - Cronograma</h5>
+          <h5 class="modal-title">Testes - Aula 3</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -239,7 +301,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p><strong>Disciplina:</strong> Testes de Software/p>
+          <p><strong>Disciplina:</strong> Testes de Software</p>
           <p><strong>Atividade:</strong> Atividade Prática</p>
         </div>
         <div class="modal-footer">
@@ -315,7 +377,7 @@
           <p><strong>Atividade:</strong> Grid e Componentes</p>
         </div>
         <div class="modal-footer">
-          <a href="https://mat-vieira12.github.io/fitAcademia/  " target="_blank" class="btn btn-primary">Ver Projeto</a>
+          <a href="https://mat-vieira12.github.io/fitAcademia/" target="_blank" class="btn btn-primary">Ver Projeto</a>
         </div>
       </div>
     </div>
@@ -383,7 +445,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p><strong>Disciplina:</strong> Iot</p>
+          <p><strong>Disciplina:</strong> IoT</p>
           <p><strong>Atividade:</strong> Entrega do Podcast</p>
         </div>
         <div class="modal-footer">
@@ -441,7 +503,7 @@
           <p><strong>Atividade:</strong> Piscando um LED</p>
         </div>
         <div class="modal-footer">
-          <a href=https://www.canva.com/design/DAG0dutJ3E0/yvffvvB8qjTFGP6VkVFFng/edit?utm_content=DAG0dutJ3E0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
+          <a href="https://www.canva.com/design/DAG0dutJ3E0/yvffvvB8qjTFGP6VkVFFng/edit?utm_content=DAG0dutJ3E0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Ver Projeto</a>
         </div>
       </div>
     </div>
@@ -454,5 +516,72 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let comentarios = [];
+
+    function carregarComentarios() {
+      const comentariosJSON = localStorage.getItem('comentariosPortfolio');
+      if (comentariosJSON) {
+        comentarios = JSON.parse(comentariosJSON);
+        exibirComentarios();
+      }
+    }
+
+    function salvarComentarios() {
+      const comentariosJSON = JSON.stringify(comentarios);
+      localStorage.setItem('comentariosPortfolio', comentariosJSON);
+      console.log('Comentários salvos em JSON:', comentariosJSON);
+    }
+
+    document.getElementById('formComentario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById('nomeInput').value;
+      const email = document.getElementById('emailInput').value;
+      const comentario = document.getElementById('comentarioInput').value;
+      
+      const novoComentario = {
+        id: Date.now(),
+        nome: nome,
+        email: email,
+        comentario: comentario,
+        data: new Date().toLocaleString('pt-BR')
+      };
+      
+      comentarios.push(novoComentario);
+      
+      salvarComentarios();
+      
+      exibirComentarios();
+      
+      this.reset();
+      
+      alert('Comentário enviado com sucesso!');
+    });
+
+    function exibirComentarios() {
+      const listaComentarios = document.getElementById('listaComentarios');
+      
+      if (comentarios.length === 0) {
+        listaComentarios.innerHTML = '<p class="text-muted">Ainda não há comentários. Seja o primeiro!</p>';
+        return;
+      }
+      
+      let html = '';
+      comentarios.forEach((coment, index) => {
+        html += `
+          <div class="comentario-item">
+            <div class="comentario-nome">${coment.nome}</div>
+            <div class="comentario-email">${coment.email} - ${coment.data}</div>
+            <div class="comentario-texto">${coment.comentario}</div>
+          </div>
+        `;
+      });
+      
+      listaComentarios.innerHTML = html;
+    }
+
+    window.addEventListener('load', carregarComentarios);
+  </script>
 </body>
 </html>
